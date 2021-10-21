@@ -1,0 +1,54 @@
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: rgb(39, 39, 39);
+    overflow: hidden;
+    color : #fff;
+}
+
+.background{
+    background: url("https://raw.githubusercontent.com/MidhaTahir/AnimatingCity/master/images/back.jpg");
+    background-size: contain;
+    background-position-y: 100%;
+    background-repeat: repeat-x;
+    height: 100vh;
+}
+.container{
+    position: absolute;
+    bottom: 0;
+}
+
+.personnage{
+    margin:2rem;
+    background: url("./images/perso.png");
+    width: 104px;
+    height: 150px;
+}
+.personnage.right{
+    background-position-y: 0px;
+}
+.personnage.left{
+    background-position-y: 300px;
+}
+.personnage.walk-right{
+    animation: walking-right 1.0s steps(6) infinite;
+}
+.personnage.walk-left{
+    animation: walking-left 1.0s steps(6) infinite;
+}
+
+@keyframes walking-left {
+    to{
+        background-position-x: 624px;
+    }
+}
+
+@keyframes walking-right {
+    to{
+        background-position-x: -624px;
+    }
+}
